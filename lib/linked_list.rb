@@ -1,3 +1,4 @@
+require "./lib/node"
 class LinkedList
   attr_accessor :head
   def initialize
@@ -46,22 +47,26 @@ class LinkedList
 
   def to_string
       self.pretty_print.join(" ")
-  #   result = ""
-  #   current_node = @head
-  #   if self.count == 1
-  #     loop do
-  #       result += "#{current_node.data}"
-  #       break if current_node.next.nil?
-  #       current_node = current_node.next
-  #     end
-  #     result
-  #   else
-  #     loop do
-  #       result += "#{current_node.data}"
-  #       break if current_node.next.nil?
-  #       current_node = current_node.next
-  #     end
-  #     result
-  #   end
+  end
+
+  def prepend(data)
+    if self.is_empty?
+      @head = Node.new(data)
+    else
+      current_head = Node.new(data)
+      current_head.next = @head
+      @head = current_head
+    end
+  end
+
+  def insert(position, data)
+    current_node = @head
+    (position - 1).times do
+      raise "list not long enough" if current_node.nil?
+      current_node = current.next
+    end
+    new_node = Node.new(data)
+    new_node.next = current_node.next
+    current_node.next = new_node
   end
 end

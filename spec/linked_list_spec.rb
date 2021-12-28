@@ -43,6 +43,15 @@ RSpec.describe LinkedList do
     list.append("doop")
     list.append("shoop")
 
-    expect(list.to_string).to eq("doop, shoop")
+    expect(list.to_string).to eq("doop shoop")
+  end
+
+  it 'can handle multiple nodes' do
+    list = LinkedList.new
+    list.append("doop")
+    list.append("shoop")
+
+    expect(list.head.data).to eq("doop")
+    expect(list.head.next.data).to eq("shoop")
   end
 end

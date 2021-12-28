@@ -45,11 +45,7 @@ class LinkedList
   end
 
   def to_string
-    if self.count > 0
-      self.pretty_print.join(", ")
-    else
       self.pretty_print.join(" ")
-    end 
   #   result = ""
   #   current_node = @head
   #   if self.count == 1

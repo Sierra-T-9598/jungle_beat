@@ -54,4 +54,25 @@ RSpec.describe LinkedList do
     expect(list.head.data).to eq("doop")
     expect(list.head.next.data).to eq("shoop")
   end
+
+  it 'can add to the front of the list' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+
+    expect(list.to_string).to eq("dop plop suu")
+    expect(list.count).to eq(3)
+  end
+
+  it 'can insert slements at a given position' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "woo")
+
+    expect(list.to_string).to eq("dop woo plop suu")
+    expect(list.count).to eq(4)
+  end
 end

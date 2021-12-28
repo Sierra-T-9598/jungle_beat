@@ -16,6 +16,6 @@ RSpec.describe Node do
   it 'has a next node' do
     node = Node.new("plop")
 
-    expect(node.next_node).to eq(nil)
+    expect(node.next).to eq(nil)
   end
-end 
+end

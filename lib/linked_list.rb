@@ -101,7 +101,29 @@ class LinkedList
         new_list << current.next.data
       end
     end
-    
+
     return new_list.join(" ")
+  end
+
+  def includes?(value)
+    current = @head
+
+    if current.data == value
+      return true
+    else
+      loop do
+        current = current.next
+        if current.data == value || current.next == nil
+          break
+        end
+
+      end
+    end
+
+    if current.data != value
+      return false
+    else
+      return true
+    end
   end
 end

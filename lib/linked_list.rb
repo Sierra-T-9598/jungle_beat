@@ -126,4 +126,21 @@ class LinkedList
       return true
     end
   end
+
+  def pop
+
+    current = @head
+
+    last_data = self.pretty_print.last
+    if current.data == last_data
+      @head = current.next
+    else
+      while(current.next != nil) && (current.next.data != last_data )
+        current = current.next
+      end
+      unless current.next == nil
+        current.next = (current.next).next
+      end
+    end
+  end
 end

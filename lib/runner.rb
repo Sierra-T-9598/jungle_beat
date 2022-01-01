@@ -43,8 +43,9 @@ p list.to_string
 # first position indicates first position to return and second specifies how many elements to return
 p list.find(2, 1)
 p list.find(1, 3)
-# p list.includes?("deep")
-# p list.includes?("dep")
-# list.pop
-# list.pop
-# p list.to_string 
+p list.includes?("deep")
+p list.includes?("dep")
+list.pop
+list.pop
+list.pop
+p list.to_string

@@ -100,4 +100,19 @@ RSpec.describe LinkedList do
     expect(list.includes?("dep")).to eq(false)
     expect(list.includes?("shi")).to eq(true)
   end
+
+  it 'can remove the last element from the list' do
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+    list.pop
+    list.pop
+    list.pop
+
+    expect(list.to_string).to eq("deep woo")
+
+  end
 end

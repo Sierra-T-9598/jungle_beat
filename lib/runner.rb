@@ -1,4 +1,5 @@
 require './lib/linked_list'
+require './lib/jungle_beat'
 #Iteration 0
 # node = Node.new("plop")
 # p node.data
@@ -33,19 +34,29 @@ require './lib/linked_list'
 # p list.to_string
 
 #Iteration 4
-p list = LinkedList.new
-list.append("deep")
-list.append("woo")
-list.append("shi")
-list.append("shu")
-list.append("blop")
-p list.to_string
+# p list = LinkedList.new
+# list.append("deep")
+# list.append("woo")
+# list.append("shi")
+# list.append("shu")
+# list.append("blop")
+# p list.to_string
 # first position indicates first position to return and second specifies how many elements to return
-p list.find(2, 1)
-p list.find(1, 3)
-p list.includes?("deep")
-p list.includes?("dep")
-list.pop
-list.pop
-list.pop
-p list.to_string
+# p list.find(2, 1)
+# p list.find(1, 3)
+# p list.includes?("deep")
+# p list.includes?("dep")
+# list.pop
+# list.pop
+# list.pop
+# p list.to_string
+
+#Iteration 5
+p jb = JungleBeat.new
+p jb.list
+p jb.list.head
+jb.append("deep doo ditt")
+p jb.list.head.data
+p jb.list.head.next.data
+jb.append("woo hoo shu")
+p jb.count

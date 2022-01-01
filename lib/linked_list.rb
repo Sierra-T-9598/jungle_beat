@@ -1,5 +1,5 @@
 require "./lib/node"
-class LinkedList
+class LinkedList 
   attr_accessor :head
   def initialize
     @head = nil

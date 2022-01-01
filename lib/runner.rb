@@ -22,12 +22,30 @@ require './lib/linked_list'
 # p list.to_string
 
 #Iteration 3
+# p list = LinkedList.new
+# p list.append("plop")
+# p list.to_string
+# p list.append("suu")
+# p list.prepend("dop")
+# p list.to_string
+# p list.count
+# p list.insert(1, "woo")
+# p list.to_string
+
+#Iteration 4
 p list = LinkedList.new
-p list.append("plop")
+list.append("deep")
+list.append("woo")
+list.append("shi")
+list.append("shu")
+list.append("blop")
 p list.to_string
-p list.append("suu")
-p list.prepend("dop")
-p list.to_string
-p list.count
-p list.insert(1, "woo")
+# first position indicates first position to return and second specifies how many elements to return
+p list.find(2, 1)
+p list.find(1, 3)
+p list.includes?("deep")
+p list.includes?("dep")
+list.pop
+list.pop
+list.pop
 p list.to_string

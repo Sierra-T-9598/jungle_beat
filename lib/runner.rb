@@ -52,11 +52,18 @@ require './lib/jungle_beat'
 # p list.to_string
 
 #Iteration 5
+# p jb = JungleBeat.new
+# p jb.list
+# p jb.list.head
+# jb.append("deep doo ditt")
+# p jb.list.head.data
+# p jb.list.head.next.data
+# jb.append("woo hoo shu")
+# p jb.count
+
+#Iteration 6
 p jb = JungleBeat.new
-p jb.list
-p jb.list.head
-jb.append("deep doo ditt")
-p jb.list.head.data
-p jb.list.head.next.data
-jb.append("woo hoo shu")
+jb.append("deep doo ditt woo hoo shu")
 p jb.count
+p jb.list.count
+p jb.play

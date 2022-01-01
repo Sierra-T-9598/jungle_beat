@@ -36,4 +36,9 @@ class JungleBeat < LinkedList
   def count
     list.count
   end
+
+  def play
+    beats = list.to_string
+    `say -r 400 #{beats}`
+  end
 end
